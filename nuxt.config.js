@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'black_clover_manga',
+    title: 'Read Black Clover Manga Online',
     htmlAttrs: {
       lang: 'en',
     },
