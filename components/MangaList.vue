@@ -2,10 +2,11 @@
   <div>
     <div class="mangalist">Find the latest manga releases</div>
 
-    <div class="chapter" v-for="(chapter, id) in sortArr()" :key="id">
-      {{ id }}
+    <div class="container">
+      <div class="chapter" v-for="(chapter, id) in sortArr()" :key="chapter">
+        {{ id }}
+      </div>
     </div>
-    <!-- {{ sortArr() }} -->
   </div>
 </template>
 
@@ -23,7 +24,6 @@ export default {
       return Object.fromEntries(
         Object.entries(d).sort((a, b) => {
           return (
-            // a - b
             a[0].replace('Black Clover, Chapter ', '') -
             b[0].replace('Black Clover, Chapter ', '')
           )

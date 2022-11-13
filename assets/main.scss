@@ -61,18 +61,21 @@ section {
     .chapter{
         text-align: left;
         padding-left: 20px;
+        width: 70%;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
     }
 }
 header {
     background: #3e3e3e;
     color: rgb(255, 255, 255);
-    /* padding: 20px 10px 20px 40px; */
     font-weight: 600;
     font-size: 1.2rem;
     box-shadow: 1.2px 1.2px 1.2px 1px #2222225a;
     text-transform: uppercase;
     height: 100px;
-    // text-align: center;
     padding-left: 100px;
     vertical-align: middle;
     line-height: 100px;
