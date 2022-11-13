@@ -9,6 +9,16 @@ box-sizing: border-box;
 body{
     font-family: 'Poppins', sans-serif;
 
+    .title{
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+    }
+
+    .images{
+        
+    }
+
     .introduction{
         display: flex;
         justify-content: space-evenly;

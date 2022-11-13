@@ -3,8 +3,12 @@
     <div class="mangalist">Find the latest manga releases</div>
 
     <div class="container">
-      <div class="chapter" v-for="(chapter, id) in sortArr()" :key="chapter">
-        {{ id }}
+      <div
+        class="chapter"
+        v-for="(chapter, id) in sortArr()"
+        :key="chapter + id"
+      >
+        <NuxtLink :to="`${id.toLowerCase()}`">{{ id }}</NuxtLink>
       </div>
     </div>
   </div>
