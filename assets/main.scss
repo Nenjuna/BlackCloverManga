@@ -16,7 +16,7 @@ body{
     }
 
     .images{
-        
+
     }
 
     .introduction{
@@ -71,11 +71,30 @@ section {
     .chapter{
         text-align: left;
         padding-left: 20px;
-        width: 70%;
+
+        a{
+            text-decoration: none;
+        }
+        .subs{
+            font-size: 0.8rem;
+            display: block;
+            color: #545454;
+        }
     }
     .container{
         display: flex;
         flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        border: 1px solid #eee;
+        width: 70vw;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            // width: 80%;
+            // border: 3px solid red
     }
 }
 header {
@@ -89,5 +108,10 @@ header {
     padding-left: 100px;
     vertical-align: middle;
     line-height: 100px;
+
+    a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
 }
 

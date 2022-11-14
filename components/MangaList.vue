@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="mangalist">Find the latest manga releases</div>
+    <div class="mangalist">
+      <h1>Find the latest Black Clover releases</h1>
+    </div>
 
     <div class="container">
       <div
@@ -8,7 +10,14 @@
         v-for="(chapter, id) in sortArr()"
         :key="chapter + id"
       >
-        <NuxtLink :to="`${id.toLowerCase()}`">{{ id }}</NuxtLink>
+        <NuxtLink
+          :to="`${id
+            .replace(/ /g, '_')
+            .toLowerCase()
+            .replace('black_clover,_', '')}`"
+          >{{ id }}</NuxtLink
+        >
+        <span class="subs">{{ chapter.chapter_name }}</span>
       </div>
     </div>
   </div>
@@ -28,8 +37,8 @@ export default {
       return Object.fromEntries(
         Object.entries(d).sort((a, b) => {
           return (
-            a[0].replace('Black Clover, Chapter ', '') -
-            b[0].replace('Black Clover, Chapter ', '')
+            b[0].replace('Black Clover, Chapter ', '') -
+            a[0].replace('Black Clover, Chapter ', '')
           )
         })
       )

@@ -1,5 +1,7 @@
 <template>
-  <header>Black Cover Manga</header>
+  <header>
+    <a href="/">Black Cover Manga</a>
+  </header>
 </template>
 
 <script>

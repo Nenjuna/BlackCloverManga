@@ -1,3 +1,4 @@
+const d = require('./static/black_clover_mangas.json')
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -30,7 +31,25 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/sitemap',
   ],
+
+  sitemap: {
+    routes: async () => {
+      let response = Object.fromEntries(
+        Object.entries(d).sort((a, b) => {
+          return (
+            b[0].replace('Black Clover, Chapter ', '') -
+            a[0].replace('Black Clover, Chapter ', '')
+          )
+        })
+      )
+      // console.log(response)
+      return Object.entries(response).map((v) =>
+        v[0].replace(/ /g, '_').toLowerCase().replace('black_clover,_', '')
+      )
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

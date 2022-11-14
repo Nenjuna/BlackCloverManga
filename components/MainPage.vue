@@ -32,7 +32,7 @@
         </table>
       </div>
     </div>
-    <MangaList />
+    <div class="wrapper"><MangaList /></div>
   </section>
 </template>
 
