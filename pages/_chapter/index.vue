@@ -9,7 +9,7 @@
     <section>
       <div class="wrapper">
         <div class="images" v-for="(chapter, index) in chapters" :key="index">
-          <img :src="chapter.src" />
+          <img :src="chapter.src" :alt="chapter.id" />
         </div>
       </div>
     </section>
