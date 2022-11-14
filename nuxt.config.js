@@ -35,6 +35,9 @@ export default {
   ],
 
   sitemap: {
+    hostname: 'https://readblackclover.vercel.app/',
+    lastmod: Date.now(),
+    cacheTime: 1000 * 60 * 45,
     routes: async () => {
       let response = Object.fromEntries(
         Object.entries(d).sort((a, b) => {
