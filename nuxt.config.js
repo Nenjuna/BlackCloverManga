@@ -11,6 +11,10 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
+      {
+        name: 'google-site-verification',
+        content: '9cKvHaIcmw5VmtH34TUJxEuhdIpS_zK4hOdf3KLVUzc',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -36,7 +40,8 @@ export default {
 
   sitemap: {
     hostname: 'https://readblackclover.vercel.app/',
-    lastmod: Date.now(),
+    // lastmod: new Date(),
+    lastmod: '2017-06-30',
     cacheTime: 1000 * 60 * 45,
     routes: async () => {
       let response = Object.fromEntries(
