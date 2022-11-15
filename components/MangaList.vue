@@ -4,12 +4,8 @@
       <h1>Find the latest Black Clover releases</h1>
     </div>
 
-    <div class="container">
-      <div
-        class="chapter"
-        v-for="(chapter, id) in sortArr()"
-        :key="chapter + id"
-      >
+    <div class="container" @scroll="onScroll">
+      <div class="chapter" v-for="(chapter, id) in all" :key="chapter + id">
         <NuxtLink
           :to="`${id
             .replace(/ /g, '_')
@@ -30,11 +26,14 @@ export default {
   data() {
     return {
       data: d,
+      all: {},
+      current: {},
+      pointer: 10,
     }
   },
   methods: {
     sortArr() {
-      return Object.fromEntries(
+      this.all = Object.fromEntries(
         Object.entries(d).sort((a, b) => {
           return (
             b[0].replace('Black Clover, Chapter ', '') -
@@ -42,7 +41,24 @@ export default {
           )
         })
       )
+
+      this.current = Object.fromEntries(Object.entries(this.all).slice(0, 10))
     },
+    loadMorePosts() {
+      this.current = Object.fromEntries(
+        Object.entries(this.all).slice(0, this.pointer)
+      )
+      this.pointer = this.pointer + 10
+    },
+    onScroll({ target: { scrollTop, clientHeight, scrollHeight } }) {
+      console.log('scroll')
+      if (scrollTop + clientHeight >= scrollHeight) {
+        this.loadMorePosts()
+      }
+    },
+  },
+  created() {
+    this.sortArr()
   },
 }
 </script>
