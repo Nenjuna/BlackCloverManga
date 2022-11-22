@@ -2,14 +2,19 @@ const d = require('./static/black_clover_mangas.json')
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Read Black Clover Manga Online',
+    title: 'Read Black Clover Manga Online - Free Latest Episodes',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Read Black Clover Manga online - Free Manga reader, Black Clover - New Episodes',
+      },
       { name: 'format-detection', content: 'telephone=no' },
       {
         name: 'google-site-verification',

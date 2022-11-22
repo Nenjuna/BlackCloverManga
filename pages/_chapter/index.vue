@@ -20,6 +20,13 @@
 <script>
 import d from '~/static/black_clover_mangas.json'
 export default {
+  data() {
+    return {
+      chapters: '',
+      title: '',
+      subtitle: '',
+    }
+  },
   async asyncData({ params, redirect }) {
     const filteredChapter = Object.entries(d).find(
       (el) =>
@@ -34,6 +41,19 @@ export default {
       }
     } else {
       redirect('/')
+    }
+  },
+
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `Read ${this.title} for Free - ${this.subtitle} free manga`,
+        },
+      ],
     }
   },
 }
