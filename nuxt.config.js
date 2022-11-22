@@ -38,10 +38,16 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
   ],
-  robots: {
-    UserAgent: '*',
-    Disallow: '',
-  },
+  robots: [
+    {
+      UserAgent: '*',
+      Disallow: '',
+    },
+    {
+      UserAgent: '*',
+      Allow: '/sitemap.xml',
+    },
+  ],
   sitemap: {
     hostname: 'https://readblackclover.vercel.app/',
     // lastmod: new Date(),
