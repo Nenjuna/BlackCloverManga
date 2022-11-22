@@ -57,9 +57,20 @@ export default {
         })
       )
       // console.log(response)
-      return Object.entries(response).map((v) =>
+
+      const res = Object.entries(response).map((v) =>
         v[0].replace(/ /g, '_').toLowerCase().replace('black_clover,_', '')
       )
+
+      const objs = res.map((v) => ({
+        url: v,
+        changefreq: 'daily',
+        priority: 1,
+        lastmodISO: Date.now(),
+      }))
+
+      // console.log(objs)
+      return objs
     },
   },
 
