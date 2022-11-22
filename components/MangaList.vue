@@ -63,4 +63,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.container {
+  height: 500px;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+</style>

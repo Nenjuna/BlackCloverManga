@@ -12,6 +12,7 @@ footer{
 }
 body{
     font-family: 'Poppins', sans-serif;
+    height: 100vh;
 
     .title{
         padding: 10px;
@@ -104,10 +105,10 @@ header {
     font-size: 1.2rem;
     box-shadow: 1.2px 1.2px 1.2px 1px #2222225a;
     text-transform: uppercase;
-    height: 100px;
+    height: 80px;
     padding-left: 100px;
     vertical-align: middle;
-    line-height: 100px;
+    line-height: 80px;
 
     a{
         text-decoration: none;
