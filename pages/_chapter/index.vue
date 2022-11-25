@@ -25,6 +25,7 @@ export default {
       chapters: '',
       title: '',
       subtitle: '',
+      keyword: '',
     }
   },
   async asyncData({ params, redirect }) {
@@ -38,6 +39,7 @@ export default {
         chapters: filteredChapter[1].chapters,
         title: filteredChapter[0],
         subtitle: filteredChapter[1].chapter_name,
+        keyword: filteredChapter[0].split(', ')[1],
       }
     } else {
       redirect('/')
@@ -46,12 +48,17 @@ export default {
 
   head() {
     return {
-      title: this.title,
+      title: this.title + ' - ' + this.subtitle,
+      // keyword: this.title.split(', ')[1],
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: `Read ${this.title} for Free - ${this.subtitle} free manga`,
+          content: `Read ${this.title} for Free - ${this.subtitle} | Free Manga Reader | ReadBlackClover.vercel.app`,
+        },
+        {
+          name: 'keywords',
+          content: `Read ${this.keyword}, ${this.title} free manga, Read ${this.keyword} from Black Clover for free, Free Manga Reader | ReadBlackClover.vercel.app`,
         },
       ],
     }

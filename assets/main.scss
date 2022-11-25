@@ -85,6 +85,10 @@ section {
         text-align: left;
         padding-left: 20px;
 
+        @media screen and (max-width: $small) {
+                width: 100%;
+            }
+
         a{
             text-decoration: none;
         }
@@ -101,6 +105,11 @@ section {
         // align-items: center;
         border: 1px solid #eee;
         width: 70vw;
+        @media screen and (max-width: $small) {
+                min-width: 90vw;
+                // justify-content: center;
+                align-items: center;
+            }
     }
     .wrapper{
         display: flex;
