@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+$small: 500px;
+$medium: 900px;
+
 * {
 margin: 0;
 padding: 0;
@@ -19,7 +22,11 @@ body{
         border-bottom: 1px solid #eee;
         text-align: center;
     }
-
+    .images img{
+        @media screen and (max-width: $small) {
+                max-width: 90vw;
+            }
+    }
     .introduction{
         display: flex;
         justify-content: space-evenly;
@@ -27,6 +34,11 @@ body{
         width: 100%;
         background: #f0f0f0;
         padding: 30px;
+
+        @media screen and (max-width: $small) {
+                flex-direction: column;}
+
+    
 
         img{
             height: 400px;
@@ -109,6 +121,10 @@ header {
     padding-left: 100px;
     vertical-align: middle;
     line-height: 80px;
+
+    @media screen and (max-width: $small){
+        width: 100vw;
+    }
 
     a{
         text-decoration: none;
