@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-$small: 500px;
+$small: 1024px;
 $medium: 900px;
 
 * {
@@ -22,6 +22,35 @@ body{
         border-bottom: 1px solid #eee;
         text-align: center;
     }
+
+    .mobile{
+        padding: 10px;
+        border: 1px solid #eee;
+        .prev, .next{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        .prev::before {
+                content: url('./left-arrow.png');
+                margin-top: 2px;
+            }
+        
+        .next::after {
+                content: url('./right-arrow.png');
+                margin-top: 3px;
+            }
+
+        @media screen and (max-width: $small) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+
+    
+
     .images img{
         @media screen and (max-width: $small) {
                 max-width: 90vw;
@@ -101,8 +130,6 @@ section {
     .container{
         display: flex;
         flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
         border: 1px solid #eee;
         width: 70vw;
         @media screen and (max-width: $small) {
@@ -114,23 +141,56 @@ section {
     .wrapper{
         display: flex;
         justify-content: center;
-        align-items: center;
-            // width: 80%;
-            // border: 3px solid red
+        align-items: left;
+
+        @media screen and (max-width: $small) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+
+        .images{
+            border: 1px solid #eee;
+            margin: 1px;
+            padding: 5px;
+            width: 60vw;
+            overflow: scroll;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media screen and (max-width: $small) {
+                width: 100vw;
+                }
+        }
     }
 }
+.subheading {
+    color: #eee;
+    background-color: #3c3c3c;
+    height: 30px;
+    // padding: 10px;
+    font-size: 0.8rem;
+    line-height: 30px;
+    // padding-left: 100px;
+    vertical-align: middle;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
 header {
+    // display: flex;
+    // flex-direction: column;
     background: #3e3e3e;
     color: rgb(255, 255, 255);
     font-weight: 600;
     font-size: 1.2rem;
     box-shadow: 1.2px 1.2px 1.2px 1px #2222225a;
     text-transform: uppercase;
+    text-align: center;
     height: 80px;
-    padding-left: 100px;
+    // padding-left: 100px;
     vertical-align: middle;
     line-height: 80px;
-
+    margin-bottom: 20px;
     @media screen and (max-width: $small){
         width: 100vw;
     }

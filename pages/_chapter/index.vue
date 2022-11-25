@@ -5,6 +5,13 @@
       <h1>{{ title }}</h1>
       <h2>{{ subtitle }}</h2>
     </div>
+    <div class="mobile">
+      <NuxtLink :to="`chapter_${currentchapter - 1}`" class="prev"
+        >Prev</NuxtLink
+      ><NuxtLink :to="`chapter_${currentchapter + 1}`" class="next"
+        >Next</NuxtLink
+      >
+    </div>
 
     <section>
       <div class="wrapper">
@@ -26,6 +33,9 @@ export default {
       title: '',
       subtitle: '',
       keyword: '',
+      nextchapter: '',
+      previouschapter: '',
+      currentchapter: '',
     }
   },
   async asyncData({ params, redirect }) {
@@ -40,6 +50,14 @@ export default {
         title: filteredChapter[0],
         subtitle: filteredChapter[1].chapter_name,
         keyword: filteredChapter[0].split(', ')[1],
+        currentchapter: parseInt(
+          filteredChapter[0]
+            .replace(/ /g, '_')
+            .toLowerCase()
+            .replace('black_clover,_', '')
+            .replace('chapter_', '')
+        ),
+        // nextchapter: currentchapter + 1,
       }
     } else {
       redirect('/')
@@ -69,5 +87,8 @@ export default {
 <style>
 .wrapper {
   flex-direction: column;
+}
+.mobile {
+  display: none;
 }
 </style>
