@@ -6,11 +6,16 @@
       <h2>{{ subtitle }}</h2>
     </div>
     <div class="mobile">
-      <NuxtLink :to="`chapter_${currentchapter - 1}`" class="prev"
-        >Prev</NuxtLink
-      ><NuxtLink :to="`chapter_${currentchapter + 1}`" class="next"
-        >Next</NuxtLink
-      >
+      <button class="prev">
+        <NuxtLink :to="`chapter_${currentchapter - 1}`"
+          >Prev (CH# {{ currentchapter - 1 }})</NuxtLink
+        >
+      </button>
+      <button class="next">
+        <NuxtLink :to="`chapter_${currentchapter + 1}`"
+          >Next (CH# {{ currentchapter + 1 }})</NuxtLink
+        >
+      </button>
     </div>
 
     <section>
@@ -87,8 +92,5 @@ export default {
 <style>
 .wrapper {
   flex-direction: column;
-}
-.mobile {
-  display: none;
 }
 </style>

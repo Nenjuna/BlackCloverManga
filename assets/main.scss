@@ -23,9 +23,24 @@ body{
         text-align: center;
     }
 
+    button{
+        padding: 0px 10px 0px 10px;
+        padding: 5px;
+        border: none;
+        color:#3c3c3c;
+        a{
+            text-decoration: none;
+            color: #3c3c3c;
+        }
+        
+    }
+
     .mobile{
         padding: 10px;
         border: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+
         .prev, .next{
             display: flex;
             justify-content: center;
@@ -42,10 +57,7 @@ body{
                 margin-top: 3px;
             }
 
-        @media screen and (max-width: $small) {
-            display: flex;
-            justify-content: space-between;
-        }
+      
 
     }
 
