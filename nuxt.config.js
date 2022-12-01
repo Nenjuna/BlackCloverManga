@@ -20,6 +20,10 @@ export default {
         name: 'google-site-verification',
         content: '9cKvHaIcmw5VmtH34TUJxEuhdIpS_zK4hOdf3KLVUzc',
       },
+      {
+        name: 'keywords',
+        content: `Black Clover Manga Free, Black Clover Manga Reddit, Black Clover Manga Release Date, Black Clover Manga Latest Chapter, Black Clover Manga, Black Clover, Free Manga Reader | ReadBlackClover.vercel.app`,
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -42,7 +46,11 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
+    '@nuxtjs/gtm',
   ],
+  gtm: {
+    id: 'G-X9382KE4PV',
+  },
   robots: [
     {
       UserAgent: '*',
