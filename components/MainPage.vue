@@ -2,7 +2,7 @@
 <template>
   <section>
     <div class="introduction">
-      <img src="../static/black_clover.png" alt="black_clover_poster" />
+      <img src="/black_clover.png" format="webp" />
       <div class="details">
         <table>
           <tr>

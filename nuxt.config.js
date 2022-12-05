@@ -3,6 +3,13 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Read Black Clover Manga Online - Free Latest Episodes',
+    script: [
+      {
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1212734777585446',
+        async: true,
+        crossorigin: 'anonymous',
+      },
+    ],
     htmlAttrs: {
       lang: 'en',
     },
