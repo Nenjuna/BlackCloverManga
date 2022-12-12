@@ -51,23 +51,17 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/sitemap',
     '@nuxtjs/robots',
     '@nuxtjs/gtm',
+    '@nuxtjs/sitemap',
   ],
   gtm: {
     id: 'G-X9382KE4PV',
   },
-  robots: [
-    {
-      UserAgent: '*',
-      Disallow: '',
-    },
-    {
-      UserAgent: '*',
-      Allow: '/sitemap.xml',
-    },
-  ],
+  robots: {
+    UserAgent: '*',
+    Disallow: '/user',
+  },
   sitemap: {
     hostname: 'https://readblackclover.vercel.app/',
     // lastmod: new Date(),
