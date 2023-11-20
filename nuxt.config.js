@@ -1,7 +1,12 @@
 const d = require('./static/black_clover_mangas.json')
+
+import { defineNuxtConfig } from '@nuxt/bridge'
+
 export default {
+  bridge: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    bodyAttrs: { class: 'antialiased text-slate-400 bg-slate-900' },
     title: 'Read Black Clover Manga Online - Free Latest Episodes',
     script: [
       {
@@ -54,6 +59,7 @@ export default {
     '@nuxtjs/robots',
     '@nuxtjs/gtm',
     '@nuxtjs/sitemap',
+    '@nuxtjs/tailwindcss',
   ],
   gtm: {
     id: 'G-X9382KE4PV',
@@ -65,7 +71,7 @@ export default {
   sitemap: {
     hostname: 'https://readblackclover.vercel.app/',
     // lastmod: new Date(),
-    lastmod: '2017-06-30',
+    lastmod: new Date(),
     cacheTime: 1000 * 60 * 45,
     routes: async () => {
       let response = Object.fromEntries(

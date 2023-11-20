@@ -1,11 +1,17 @@
 <template>
   <div>
     <div class="mangalist">
-      <h1>Find the latest Black Clover releases</h1>
+      <h1 class="p-4 text-slate-200 font-medium text-center">
+        Find the latest Black Clover releases
+      </h1>
     </div>
 
     <div class="container" @scroll="onScroll">
-      <div class="chapter" v-for="(chapter, id) in all" :key="chapter + id">
+      <div
+        class="bg-slate-800 border-b border-slate-700 p-4 text-slate-300 text-sm"
+        v-for="(chapter, id) in all"
+        :key="chapter + id"
+      >
         <NuxtLink
           :to="`${id
             .replace(/ /g, '_')
@@ -13,7 +19,9 @@
             .replace('black_clover,_', '')}`"
           >{{ id }}</NuxtLink
         >
-        <span class="subs">{{ chapter.chapter_name }}</span>
+        <span class="text-slate-500 text-xs block">{{
+          chapter.chapter_name
+        }}</span>
       </div>
     </div>
   </div>
@@ -65,7 +73,7 @@ export default {
 
 <style>
 .container {
-  height: 49vh;
+  height: 50vh;
   overflow: auto;
   margin-bottom: 20px;
 }

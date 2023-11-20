@@ -2,16 +2,24 @@
   <div>
     <Header />
     <div class="title">
-      <h1>{{ title }}</h1>
-      <h2>{{ subtitle }}</h2>
+      <h1 class="p-4 pb-0 text-slate-200 font-medium text-center">
+        {{ title }}
+      </h1>
+      <h2 class="p-4 pt-0 text-slate-400 font-small text-center">
+        {{ subtitle }}
+      </h2>
     </div>
-    <div class="mobile">
-      <button class="prev">
+    <div class="flex justify-between">
+      <button
+        class="bg-blue-500 p-4 m-4 rounded-md shadow-lg shadow-blue-500/50 text-white text-xs"
+      >
         <NuxtLink :to="`chapter_${currentchapter - 1}`"
           >Prev (CH# {{ currentchapter - 1 }})</NuxtLink
         >
       </button>
-      <button class="next">
+      <button
+        class="bg-blue-500 p-4 m-4 rounded-md shadow-lg shadow-blue-500/50 text-white text-xs"
+      >
         <NuxtLink :to="`chapter_${currentchapter + 1}`"
           >Next (CH# {{ currentchapter + 1 }})</NuxtLink
         >
@@ -19,7 +27,7 @@
     </div>
 
     <section>
-      <div class="wrapper">
+      <div class="flex items-center flex-col align-middle">
         <div class="images" v-for="(chapter, index) in chapters" :key="index">
           <img :src="chapter.src" :alt="chapter.id" />
         </div>
