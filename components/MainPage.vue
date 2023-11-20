@@ -41,7 +41,7 @@
         <img src="/black_clover.png" format="webp" class="w-full" />
       </div>
       <div
-        class="not-prose relative rounded-xl overflow-hidde md:max-w-sm bg-slate-800/25"
+        class="flex-1 not-prose relative rounded-xl overflow-hidde md:max-w-sm bg-slate-800/25"
       >
         <table class="table-fixed">
           <thead>
