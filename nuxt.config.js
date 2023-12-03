@@ -3,6 +3,7 @@ const d = require('./static/black_clover_mangas.json')
 import { defineNuxtConfig } from '@nuxt/bridge'
 
 export default {
+  target: 'static',
   bridge: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {

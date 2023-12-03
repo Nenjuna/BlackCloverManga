@@ -6,7 +6,7 @@
       </h1>
     </div>
 
-    <div class="container" @scroll="onScroll">
+    <div class="container mx-auto" @scroll="onScroll">
       <div
         class="bg-slate-800 border-b border-slate-700 p-4 text-slate-300 text-sm"
         v-for="(chapter, id) in all"
