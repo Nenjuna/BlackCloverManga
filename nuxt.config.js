@@ -7,6 +7,7 @@ export default {
   bridge: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    // titleTemplate: '%s',
     bodyAttrs: { class: 'antialiased text-slate-400 bg-slate-900' },
     title: 'Read Black Clover Manga Online - Free Latest Episodes',
     script: [
