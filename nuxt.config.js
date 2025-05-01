@@ -113,7 +113,7 @@ export default {
   routeRules: {
        '/old-domain': {
          redirect: {
-           to: 'https://new-domain.com',
+           to: 'https://mangafoxy.com/black-clover',
            statusCode: 301
          }
        }
