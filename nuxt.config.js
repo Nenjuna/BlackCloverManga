@@ -111,7 +111,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   routeRules: {
-       '/old-domain': {
+       '/': {
          redirect: {
            to: 'https://mangafoxy.com/black-clover',
            statusCode: 301
