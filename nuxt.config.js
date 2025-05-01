@@ -110,4 +110,12 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  routeRules: {
+       '/old-domain': {
+         redirect: {
+           to: 'https://new-domain.com',
+           statusCode: 301
+         }
+       }
+     }
 }
