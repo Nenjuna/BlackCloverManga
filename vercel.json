@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://mangafoxy.com/black-clover/",
+      "permanent": true
+    }
+  ]
+}
